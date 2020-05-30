@@ -1,5 +1,6 @@
 import re
 import requests
+import time
 from bs4 import BeautifulSoup
 from lxml import html
 from aiogram import Bot, Dispatcher, executor, types
@@ -41,5 +42,6 @@ async def main():
     obt = ParserData()
     while True:
         await obt.ParseLinks("https://freelancehunt.ua/projects/skill/razrabotka-botov/180.html")
+        time.sleep(200)
 if __name__ == '__main__':
     executor.start(dp, main())
